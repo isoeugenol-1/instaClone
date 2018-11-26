@@ -1,0 +1,24 @@
+<center>
+  <h1>以下の内容で、送信する。</h1>
+
+  <%= form_with(model: @picture, url: pictures_path, local: true) do |form| %>
+    <%= form.hidden_field :title %>
+    <%= form.hidden_field :content %>
+    <%= form.hidden_field :image %>
+    <p>タイトル:<%= @picture.title %></p>
+    <p>本文:<%= @picture.content %></p>
+    <p>
+      image:
+      <%= image_tag(@picture.image.url) if @picture.image.url%>
+      <%= form.hidden_field :image_cache %>
+    </p>
+    <p class="submit"><%= form.submit  "投稿する" %></p>
+  <% end %>
+ 
+  <%= form_with(model: @picture, url: new_picture_path, local: true, method: 'get') do |form| %>
+    <%= form.hidden_field :title %>
+    <%= form.hidden_field :content %>
+    <%= form.hidden_field :image_cache %>
+    <p class="submit"><%= form.submit "もどる", name: 'back' %></p>
+  <% end %>
+</center>

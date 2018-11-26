@@ -1,0 +1,32 @@
+<center>
+  <h1 class="title">Sign up</h1>
+  <%= form_with(model: @user, local: true) do |f| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this @user from being saved:</h2>
+        <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <p class="user_label"><%= f.label :name %></p>
+    <p class="user_input"><%= f.text_field :name %><p>
+  
+    <p class="user_label"><%= f.label :email %></p>
+    <p class="user_input"><%= f.email_field :email %><p>
+  
+    <p class="user_label"><%= f.label :password %></p>
+    <p class="user_input"><%= f.password_field :password %><p>
+  
+    <p class="user_label"><%= f.label :password_confirmation %></p>
+    <p class="user_input"><%= f.password_field :password_confirmation %><p>
+  
+    <p class="user_label"><%= f.label :image%></p>
+    <p class="user_image"><%= f.file_field :image %><p>
+
+    <p class="submit"><%= f.submit "Create my account"%></p>
+    <% end %>
+</center>

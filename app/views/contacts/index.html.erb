@@ -1,0 +1,21 @@
+<h1>Contacts</h1>
+<center>
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <div class="col-xs-6 col-md-offset-2 col-md-2">Name</div>
+      <div class="col-xs-6 col-md-2" >Email</div>
+      <div class="col-xs-6 col-md-2" >Content</div>
+      <div class="col-xs-6 col-md-2" ></div> 
+    </div>
+    <div class="col-xs-12 col-md-12">
+      <% @contacts.each do |contact| %>
+      <div class="col-xs-6 col-md-offset-2 col-md-2"><%= contact.name %></div>
+      <div class="col-xs-6 col-md-2" ><%= contact.email %></div>
+      <div class="col-xs-6 col-md-2" ><%= contact.content %></div>
+      <div class="col-xs-6 col-md-2" ><%= link_to 'Show ', contact %><%= link_to 'Edit ', edit_contact_path(contact) %><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></div> 
+      <% end %>
+    </div>
+  </div>
+  <br>
+  <%= link_to 'New Contact', new_contact_path %>
+</center>

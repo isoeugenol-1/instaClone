@@ -1,0 +1,12 @@
+<center>
+  <h1>user詳細画面</h1>
+  <p>name: <%= @user.name %></p>
+  <p>email: <%= @user.email %></p>
+  <p>
+    <strong>Image:</strong>
+    <%= image_tag(@user.image.url) if @user.image.url %>
+  </p>
+  
+  <%= link_to 'Edit', edit_user_path(@user) %>
+  <%= link_to 'favorite', favorites_path %>
+</center>

@@ -1,0 +1,63 @@
+.btn a {
+  display: block;
+  margin: -5px -10px;
+}
+html{
+  position: relative;
+  margin:10px;
+  background-color:#000;
+  min-height: 100%;
+}
+header{
+  padding:10px;
+}
+.session{
+  float:right;
+  margin:3px;
+  width:80px;
+  height:40px;
+  margin-bottom:10px;
+}
+footer {
+  background-color:#2c3e50;
+  width:100%;
+  color: white;
+  margin: auto;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  text-align:center;
+  padding: 10px 0 10px 0;
+}
+.file{
+  background-color:#000;
+  color:white;
+}
+body{
+ margin-bottom:10%; 
+}
+h1{
+  text-align:center;
+}
+.btn-group{
+  float:right;
+  width:100%;
+}
+.user_input{
+    color:#000;
+}
+.user_label{
+  color:#fff;
+}
+.submit{
+    color:#000;
+}
+.errmsg{
+  background-color:#000;
+  color:#fff;
+  text-align:center;
+}
+.pictureimage{
+  width:90px;
+  height:90px;
+}
